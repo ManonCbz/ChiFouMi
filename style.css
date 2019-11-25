@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.historique{
+    border : solid 1px black;
+    width: 15%;
+    float: right;
+    height: 630px;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.viewport{
+    height: 648px;
+    width: 70%;
+    margin : 3% 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.game {
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    padding-top: 20%;
+}
+
+.boutons{
+    margin : auto 0;
+    width: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.boutons * {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#fafafa;
+    box-shadow:2px 2px 8px #aaa;
+    font:bold 13px Arial;
+    border-radius:50%;
+    color:#555;
+    cursor: pointer;
+}
+
+.boutons *:active{
+    background: #e6e6e6;
+}
+
+.image {
+    border: 1px solid black;
+    width: 30%;
+    height: 50%;
+    margin: auto 0;
+}
+
+#white{
+    width: 16%;
+    z-index: 1;
+}
+
+.icon {
+    width: 10%;
+    height: 15%;
+    margin: auto 0;
+}
+
+.resultat{
+    width: 80%;
+    margin: 1% auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.score{
+    height: 50px;
+    border: solid black 1px;
+    width: 100%;
+}
+
+.victoire{
+    border: black 1px solid;
+    height: 50px;
+    width: 35%;
+    margin-top: 2%;
+}
+
+.defaite{
+    border: black 1px solid;
+    height: 50px;
+    width: 35%;
+    margin-top: 2%;
+}
+
