@@ -1,18 +1,13 @@
-
-// ====================  Choix ordi ==================== \\
-
 var imageOrdi = document.getElementById('imageordi');
 
-var choixPierre = document.getElementById('pierre');
-var choixFeuille = document.getElementById('feuille');
-var choixCiseaux = document.getElementById('ciseaux');
+var boutonPierre = document.getElementById('pierre');
+var boutonFeuille = document.getElementById('feuille');
+var boutonCiseaux = document.getElementById('ciseaux');
 
-
-choixPierre.addEventListener('click', function () {
+boutonPierre.addEventListener('click', function () {                         // Bouton Pierre
 
     var image = document.getElementById('image');
     image.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat";
-
     console.log('Pierre');
 
     var choixJose = Math.floor(Math.random()*3) + 1;
@@ -20,7 +15,6 @@ choixPierre.addEventListener('click', function () {
         case 1 :
             console.log('José a choisi Pierre');
             imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
-
             break;
 
         case 2 :
@@ -35,7 +29,8 @@ choixPierre.addEventListener('click', function () {
     }
 });
 
-choixFeuille.addEventListener('click', function () {
+
+boutonFeuille.addEventListener('click', function () {                    // Bouton Feuille
 
 
     var image = document.getElementById('image');
@@ -49,7 +44,7 @@ choixFeuille.addEventListener('click', function () {
         case 1 :
             console.log('José a choisi Pierre');
             imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
-
+            victoire = +1;
             break;
 
         case 2 :
@@ -60,11 +55,14 @@ choixFeuille.addEventListener('click', function () {
         case 3 :
             console.log('José a choisi Ciseaux');
             imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat";
+            victoire = -1;
             break;
     }
 });
 
-choixCiseaux.addEventListener('click', function () {
+
+
+boutonCiseaux.addEventListener('click', function () {                        // Bouton ciseaux
 
     var image = document.getElementById('image');
     image.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat";
@@ -76,12 +74,13 @@ choixCiseaux.addEventListener('click', function () {
         case 1 :
             console.log('José a choisi Pierre');
             imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
-
+            victoire = -1;
             break;
 
         case 2 :
             console.log('José a choisi Feuille');
             imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat";
+            victoire = +1;
             break;
 
         case 3 :
