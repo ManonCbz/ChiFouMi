@@ -53,11 +53,9 @@ h1 {
     height: 400px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-h2 {
-    padding-top: 20%;
-}
 
 .boutons{
     margin : auto 0;
@@ -69,8 +67,8 @@ h2 {
 }
 
 .boutons * {
-    width: 90%;
-    height: 25%;
+    width: 85px;
+    height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,18 +86,13 @@ h2 {
 
 .image {
     border: 1px solid black;
-    width: 30%;
-    height: 50%;
+    width: 327px;
+    height: 207px;
     margin: auto 0;
 }
 
-#white{
-    width: 16%;
-    z-index: 1;
-}
-
-.icon {
-    margin: auto 0;
+#imageordi{
+    padding-top: 5px;
 }
 
 .resultat{

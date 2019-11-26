@@ -23,14 +23,14 @@ blockDefaite.innerHTML = 'Défaites : ';
 boutonPierre.addEventListener('click', function () {
 
     var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat";
+    image.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat;";
 
     var choixJose = Math.floor(Math.random()*3) + 1;
 
     switch (choixJose) {
         case 1 :
 
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
 
             var histun = document.createElement('div');
             histun.classList.add('hist1');
@@ -39,7 +39,7 @@ boutonPierre.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -48,11 +48,11 @@ boutonPierre.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
 
             var histun = document.createElement('div');
@@ -62,7 +62,7 @@ boutonPierre.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -71,12 +71,12 @@ boutonPierre.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
 
             var histun = document.createElement('div');
@@ -86,7 +86,7 @@ boutonPierre.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -95,7 +95,7 @@ boutonPierre.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             break;
     }
@@ -115,13 +115,13 @@ boutonPierre.addEventListener('click', function () {
 boutonFeuille.addEventListener('click', function () {
 
     var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-paper.png'); background-repeat: no-repeat";
+    image.style.cssText="background: url('img/user-paper.png'); background-repeat: no-repeat;";
 
     var choixJose = Math.floor(Math.random()*3) + 1;
 
     switch (choixJose) {
         case 1 :
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
 
             var histun = document.createElement('div');
@@ -131,7 +131,7 @@ boutonFeuille.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -140,12 +140,12 @@ boutonFeuille.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
 
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
 
             var histun = document.createElement('div');
             histun.classList.add('hist1');
@@ -154,7 +154,7 @@ boutonFeuille.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -163,12 +163,12 @@ boutonFeuille.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
 
             var histun = document.createElement('div');
@@ -178,7 +178,7 @@ boutonFeuille.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -187,7 +187,7 @@ boutonFeuille.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             break;
     }
@@ -206,14 +206,14 @@ boutonFeuille.addEventListener('click', function () {
 boutonCiseaux.addEventListener('click', function () {
 
     var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat";
+    image.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat;";
 
     var choixJose = Math.floor(Math.random()*3) + 1;
 
     switch (choixJose) {
 
         case 1 :
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
 
             var histun = document.createElement('div');
@@ -223,7 +223,7 @@ boutonCiseaux.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -232,12 +232,12 @@ boutonCiseaux.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
 
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
 
             var histun = document.createElement('div');
@@ -247,7 +247,7 @@ boutonCiseaux.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -256,12 +256,12 @@ boutonCiseaux.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
 
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat";
+            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
 
             var histun = document.createElement('div');
             histun.classList.add('hist1');
@@ -270,7 +270,7 @@ boutonCiseaux.addEventListener('click', function () {
             var histdeux = document.createElement('div');
             histdeux.classList.add('imghist1');
             histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             var histtrois = document.createElement('div');
             histtrois.innerHTML= 'V.S.';
@@ -279,7 +279,7 @@ boutonCiseaux.addEventListener('click', function () {
             var histquatre = document.createElement('div');
             histquatre.classList.add('imghist2');
             histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat";
+            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
 
             break;
     }
