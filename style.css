@@ -40,7 +40,7 @@ h3 {
 .viewport{
     height: 648px;
     width: 70%;
-    margin : 3% 5%;
+    margin : 15vh 5%;
 }
 
 h1 {
@@ -76,12 +76,18 @@ h1 {
     box-shadow:2px 2px 8px #aaa;
     font:bold 13px Arial;
     border-radius:50%;
+    border-left: #9b9b9b solid 2px;
+    border-top: #9b9b9b solid 2px;
     color:#555;
     cursor: pointer;
 }
 
 .boutons *:active{
     background: #e6e6e6;
+    border-right: #9b9b9b solid 2px;
+    border-bottom: #9b9b9b solid 2px;
+    border-left: none;
+    border-top: none;
 }
 
 .image {
@@ -101,6 +107,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 
 .score{
@@ -120,6 +127,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(14, 128, 14, 0.31);
 }
 
 .defaite{
@@ -130,5 +138,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(255, 0, 0, 0.3);
 }
 
