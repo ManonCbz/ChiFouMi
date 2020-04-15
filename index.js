@@ -1,4 +1,3 @@
-var historique = document.getElementById('historique');
 var imageOrdi = document.getElementById('imageordi');
 
 var boutonPierre = document.getElementById('pierre');
@@ -17,86 +16,54 @@ blockVictoire.innerHTML = 'Victoires : ';
 blockDefaite.innerHTML = 'Défaites : ';
 
 
-// ================================================== Pierre ================================================== \\
+function historique(imageUser, imageOrdi)
+{
+    var historique = document.getElementById('historique');
 
+    var histun = document.createElement('div');
+    histun.classList.add('hist1');
+    historique.appendChild(histun);
+
+    var histdeux = document.createElement('div');
+    histdeux.classList.add('imghist1');
+    histun.appendChild(histdeux);
+    histdeux.style.cssText=imageUser;
+
+    var histtrois = document.createElement('div');
+    histtrois.innerHTML= 'V.S.';
+    histun.appendChild(histtrois);
+
+    var histquatre = document.createElement('div');
+    histquatre.classList.add('imghist2');
+    histun.appendChild(histquatre);
+    histquatre.style.cssText=imageOrdi;
+}
+
+// ================================================== Pierre ================================================== \\
 
 boutonPierre.addEventListener('click', function () {
 
     var image = document.getElementById('image');
     image.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat;";
 
-    var choixJose = Math.floor(Math.random()*3) + 1;
+    var choixOrdi = Math.floor(Math.random()*3) + 1;
 
-    switch (choixJose) {
+    switch (choixOrdi) {
         case 1 :
-
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
@@ -117,78 +84,24 @@ boutonFeuille.addEventListener('click', function () {
     var image = document.getElementById('image');
     image.style.cssText="background: url('img/user-paper.png'); background-repeat: no-repeat;";
 
-    var choixJose = Math.floor(Math.random()*3) + 1;
+    var choixOrdi = Math.floor(Math.random()*3) + 1;
 
-    switch (choixJose) {
+    switch (choixOrdi) {
         case 1 :
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
+            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
@@ -208,79 +121,25 @@ boutonCiseaux.addEventListener('click', function () {
     var image = document.getElementById('image');
     image.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat;";
 
-    var choixJose = Math.floor(Math.random()*3) + 1;
+    var choixOrdi = Math.floor(Math.random()*3) + 1;
 
-    switch (choixJose) {
+    switch (choixOrdi) {
 
         case 1 :
-            imageOrdi.style.cssText="background: url('img/jose-rock.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/rock.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/jose-paper.png'); background-repeat: no-repeat; background-position: center";
+            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/paper.png'); background-repeat: no-repeat; background-position: center";
-
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/jose-scissors.png'); background-repeat: no-repeat; background-position: center";
-
-            var histun = document.createElement('div');
-            histun.classList.add('hist1');
-            historique.appendChild(histun);
-
-            var histdeux = document.createElement('div');
-            histdeux.classList.add('imghist1');
-            histun.appendChild(histdeux);
-            histdeux.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
-            var histtrois = document.createElement('div');
-            histtrois.innerHTML= 'V.S.';
-            histun.appendChild(histtrois);
-
-            var histquatre = document.createElement('div');
-            histquatre.classList.add('imghist2');
-            histun.appendChild(histquatre);
-            histquatre.style.cssText="background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center";
-
+            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
