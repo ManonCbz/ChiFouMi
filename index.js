@@ -16,7 +16,7 @@ blockVictoire.innerHTML = 'Victoires : ';
 blockDefaite.innerHTML = 'Défaites : ';
 
 
-function historique(imageUser, imageOrdi)
+function historique(CSSimageUser, CSSimageOrdi)
 {
     var historique = document.getElementById('historique');
 
@@ -27,7 +27,7 @@ function historique(imageUser, imageOrdi)
     var histdeux = document.createElement('div');
     histdeux.classList.add('imghist1');
     histun.appendChild(histdeux);
-    histdeux.style.cssText=imageUser;
+    histdeux.style.cssText=CSSimageUser;
 
     var histtrois = document.createElement('div');
     histtrois.innerHTML= 'V.S.';
@@ -36,7 +36,7 @@ function historique(imageUser, imageOrdi)
     var histquatre = document.createElement('div');
     histquatre.classList.add('imghist2');
     histun.appendChild(histquatre);
-    histquatre.style.cssText=imageOrdi;
+    histquatre.style.cssText=CSSimageOrdi;
 }
 
 // ================================================== Pierre ================================================== \\
@@ -51,19 +51,22 @@ boutonPierre.addEventListener('click', function () {
     switch (choixOrdi) {
         case 1 :
             imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
             imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
             imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
@@ -90,18 +93,21 @@ boutonFeuille.addEventListener('click', function () {
         case 1 :
             imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
             imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
             imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
@@ -128,18 +134,21 @@ boutonCiseaux.addEventListener('click', function () {
         case 1 :
             imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
             defaite ++;
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 2 :
             imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
             victoire ++;
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
             break;
 
         case 3 :
             imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center", "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
+                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
             break;
     }
 
