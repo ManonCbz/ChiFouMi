@@ -8,7 +8,7 @@ body{
     user-select: none;
 }
 
-.historique{
+#history{
     border : solid 1px black;
     width: 15%;
     float: right;
@@ -24,20 +24,19 @@ h3 {
     font-weight: initial;
 }
 
-.hist1 {
+.historyParentBlock {
     width: 80%;
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
     margin: 2% auto;
 }
 
-[class^=imghist] {
+.historyPicture {
     height: 32px;
     width: 32px;
 }
 
-.viewport{
+#viewport{
     height: 648px;
     width: 70%;
     margin : 15vh 5%;
@@ -47,7 +46,7 @@ h1 {
     text-align: center;
 }
 
-.game {
+#game {
     width: 80%;
     margin: 0 auto;
     height: 400px;
@@ -57,7 +56,7 @@ h1 {
 }
 
 
-.boutons{
+.buttons{
     margin : auto 0;
     width: 10%;
     height: 80%;
@@ -66,7 +65,7 @@ h1 {
     justify-content: space-around;
 }
 
-.boutons * {
+.buttons * {
     width: 85px;
     height: 85px;
     display: flex;
@@ -82,7 +81,7 @@ h1 {
     cursor: pointer;
 }
 
-.boutons *:active{
+.buttons *:active{
     background: #e6e6e6;
     border-right: #9b9b9b solid 2px;
     border-bottom: #9b9b9b solid 2px;
@@ -90,18 +89,18 @@ h1 {
     border-top: none;
 }
 
-.image {
+.picture {
     border: 1px solid black;
     width: 327px;
     height: 207px;
     margin: auto 0;
 }
 
-#imageordi{
+#iaPicture{
     padding-top: 5px;
 }
 
-.resultat{
+.result{
     width: 80%;
     margin: 1% auto;
     display: flex;
@@ -119,7 +118,7 @@ h1 {
     align-items: center;
 }
 
-.victoire{
+.victory{
     border: black 1px solid;
     height: 50px;
     width: 35%;
@@ -130,7 +129,7 @@ h1 {
     background: rgba(14, 128, 14, 0.31);
 }
 
-.defaite{
+.defeat{
     border: black 1px solid;
     height: 50px;
     width: 35%;

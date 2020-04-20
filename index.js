@@ -1,160 +1,138 @@
-var imageOrdi = document.getElementById('imageordi');
+let userPicture = document.getElementById('userPicture');
+let iaPicture = document.getElementById('iaPicture');
 
-var boutonPierre = document.getElementById('pierre');
-var boutonFeuille = document.getElementById('feuille');
-var boutonCiseaux = document.getElementById('ciseaux');
+let victoryBlock = document.getElementById('victory');
+let defeatBlock = document.getElementById('defeat');
+let score = document.getElementById('score');
 
-var blockVictoire = document.getElementById('victoire');
-var blockDefaite = document.getElementById('defaite');
-var score = document.getElementById('score');
-
-var victoire = 0;
-var defaite = 0;
+let victory = 0;
+let defeat = 0;
 
 score.innerHTML= 'Score : ';
-blockVictoire.innerHTML = 'Victoires : ';
-blockDefaite.innerHTML = 'Défaites : ';
+victoryBlock.innerHTML = 'Victoires : ';
+defeatBlock.innerHTML = 'Défaites : ';
 
 
-function historique(CSSimageUser, CSSimageOrdi)
+function history(userChoice, iaChoice)
 {
-    var historique = document.getElementById('historique');
+    let historyParentBlock = document.createElement('div');
+    historyParentBlock.classList.add('historyParentBlock');
+    document.getElementById('history').appendChild(historyParentBlock);
 
-    var histun = document.createElement('div');
-    histun.classList.add('hist1');
-    historique.appendChild(histun);
+    let historyUserBlock = document.createElement('div');
+    historyUserBlock.classList.add('historyPicture');
+    historyParentBlock.appendChild(historyUserBlock);
+    historyUserBlock.style.cssText="background: url('img/" + userChoice + ".png');";
 
-    var histdeux = document.createElement('div');
-    histdeux.classList.add('imghist1');
-    histun.appendChild(histdeux);
-    histdeux.style.cssText=CSSimageUser;
+    let historyVSBlock = document.createElement('div');
+    historyVSBlock.innerHTML= 'V.S.';
+    historyParentBlock.appendChild(historyVSBlock);
 
-    var histtrois = document.createElement('div');
-    histtrois.innerHTML= 'V.S.';
-    histun.appendChild(histtrois);
-
-    var histquatre = document.createElement('div');
-    histquatre.classList.add('imghist2');
-    histun.appendChild(histquatre);
-    histquatre.style.cssText=CSSimageOrdi;
+    let historyIaBlock = document.createElement('div');
+    historyIaBlock.classList.add('historyPicture');
+    historyParentBlock.appendChild(historyIaBlock);
+    historyIaBlock.style.cssText="background: url('img/" + iaChoice + ".png');";
 }
 
 // ================================================== Pierre ================================================== \\
 
-boutonPierre.addEventListener('click', function () {
+document.getElementById('buttonRock').addEventListener('click', function () {
 
-    var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat;";
+    userPicture.style.cssText="background: url('img/user-rock.png'); background-repeat: no-repeat;";
 
-    var choixOrdi = Math.floor(Math.random()*3) + 1;
+    let iaChoice = Math.floor(Math.random()*3) + 1;
 
-    switch (choixOrdi) {
+    switch (iaChoice) {
         case 1 :
-            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-rock.png'); background-repeat: no-repeat; background-position: center;";
+            history("rock", "rock");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
-            defaite ++;
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-paper.png'); background-repeat: no-repeat; background-position: center;";
+            defeat ++;
+            history("rock", "paper");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
-            victoire ++;
-            historique("background: url('img/rock.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-scissors.png'); background-repeat: no-repeat; background-position: center;";
+            victory ++;
+            history("rock", "scissors");
             break;
     }
 
-    blockVictoire.innerHTML = 'Victoires : ' + victoire;
-    blockDefaite.innerHTML = 'Défaites : ' + defaite;
+    victoryBlock.innerHTML = 'Victoires : ' + victory;
+    defeatBlock.innerHTML = 'Défaites : ' + defeat;
 
-    var pourcentage = Math.round((victoire/(victoire + defaite))*100);
-    score.innerHTML= 'Score : ' + pourcentage + '%';
+    let percentage = Math.round((victory/(victory + defeat))*100);
+    score.innerHTML= 'Score : ' + percentage + '%';
 
 });
-
 
 // ================================================== Feuille ================================================== \\
 
+document.getElementById('buttonPaper').addEventListener('click', function () {
 
-boutonFeuille.addEventListener('click', function () {
+    userPicture.style.cssText="background: url('img/user-paper.png'); background-repeat: no-repeat;";
 
-    var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-paper.png'); background-repeat: no-repeat;";
+    let iaChoice = Math.floor(Math.random()*3) + 1;
 
-    var choixOrdi = Math.floor(Math.random()*3) + 1;
-
-    switch (choixOrdi) {
+    switch (iaChoice) {
         case 1 :
-            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
-            victoire ++;
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-rock.png'); background-repeat: no-repeat; background-position: center;";
+            victory++;
+            history("paper", "rock");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-paper.png'); background-repeat: no-repeat; background-position: center;";
+            history("paper", "paper");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
-            defaite ++;
-            historique("background: url('img/paper.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-scissors.png'); background-repeat: no-repeat; background-position: center;";
+            defeat ++;
+            history("paper", "scissors");
             break;
     }
 
-    blockVictoire.innerHTML = 'Victoires : ' + victoire;
-    blockDefaite.innerHTML = 'Défaites : ' + defaite;
+    victoryBlock.innerHTML = 'Victoires : ' + victory;
+    defeatBlock.innerHTML = 'Défaites : ' + defeat;
 
-    var pourcentage = Math.round((victoire/(victoire + defaite))*100);
-    score.innerHTML= 'Score : ' + pourcentage + '%';
+    let percentage = Math.round((victory/(victory + defeat))*100);
+    score.innerHTML= 'Score : ' + percentage + '%';
 });
-
 
 // ================================================== Ciseaux ================================================== \\
 
+document.getElementById('buttonScissors').addEventListener('click', function () {
 
-boutonCiseaux.addEventListener('click', function () {
+    userPicture.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat;";
 
-    var image = document.getElementById('image');
-    image.style.cssText="background: url('img/user-scissors.png'); background-repeat: no-repeat;";
+    let iaChoice = Math.floor(Math.random()*3) + 1;
 
-    var choixOrdi = Math.floor(Math.random()*3) + 1;
-
-    switch (choixOrdi) {
-
+    switch (iaChoice) {
         case 1 :
-            imageOrdi.style.cssText="background: url('img/ordi-rock.png'); background-repeat: no-repeat; background-position: center";
-            defaite ++;
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/rock.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-rock.png'); background-repeat: no-repeat; background-position: center;";
+            defeat ++;
+            history("scissors", "rock");
             break;
 
         case 2 :
-            imageOrdi.style.cssText="background: url('img/ordi-paper.png'); background-repeat: no-repeat; background-position: center";
-            victoire ++;
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/paper.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-paper.png'); background-repeat: no-repeat; background-position: center;";
+            victory ++;
+            history("scissors", "paper");
             break;
 
         case 3 :
-            imageOrdi.style.cssText="background: url('img/ordi-scissors.png'); background-repeat: no-repeat; background-position: center";
-            historique("background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center",
-                "background: url('img/scissors.png'); background-repeat: no-repeat; background-position: center");
+            iaPicture.style.cssText="background: url('img/ia-scissors.png'); background-repeat: no-repeat; background-position: center;";
+            history("scissors", "scissors");
             break;
     }
 
-    blockVictoire.innerHTML = 'Victoires : ' + victoire;
-    blockDefaite.innerHTML = 'Défaites : ' + defaite;
+    victoryBlock.innerHTML = 'Victoires : ' + victory;
+    defeatBlock.innerHTML = 'Défaites : ' + defeat;
 
-    var pourcentage = Math.round((victoire/(victoire + defaite))*100);
-    score.innerHTML= 'Score : ' + pourcentage + '%';
+    let percentage = Math.round((victory/(victory + defeat))*100);
+    score.innerHTML= 'Score : ' + percentage + '%';
 });
